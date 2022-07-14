@@ -3,15 +3,27 @@
 ## Pre-Requisites
 
 ```bash
-1. Install Helm
-2. Create Hosted zone under Route53 with our domain name
-3. SetUP Kong
-4. SetUP External DNS
+1. EKS Cluster
+2. Install Helm
+3. Create Hosted zone under Route53 with our domain name
+4. SetUP Kong
+5. SetUP External DNS
 ```
 
+## SetUP EKS Cluster
+
+[EKS Cluster Setup](https://github.com/Naresh240/kubernetes/blob/main/eks-cluster-setup/eks-cluster-with-eksctl/README.md)
+
+## Helm Installation with Specific Version
+
+```bash
+curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
+chmod 700 get_helm.sh
+./get_helm.sh -v v3.8.2
+```
 ## Create Hosted zone under Route53 with our domain name
 
-1. Created Hosted zone as shown in belo Image
+1. Created Hosted zone as shown in belowImage
 
 ![image](https://user-images.githubusercontent.com/58024415/178981125-b93531f8-0089-4554-92e7-82aba2d94e01.png)
 

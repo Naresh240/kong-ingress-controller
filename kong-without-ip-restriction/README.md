@@ -1,4 +1,4 @@
-# kong-ingress-controller
+# kong-ingress-controller without ip restriction plugin
 
 ## Pre-Requisites
 

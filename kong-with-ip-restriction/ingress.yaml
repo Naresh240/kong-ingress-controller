@@ -1,0 +1,21 @@
+---		  
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: nginx-ingress
+  annotations:
+    ingress.kubernetes.io/ssl-redirect: "false"  
+    kubernetes.io/ingress.class: kong
+    konghq.com/plugins: nginx-kong-plugin
+spec:
+  rules:
+  - host: nginx.awsdevopstrainer.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: nginx-service
+            port:
+              number: 80

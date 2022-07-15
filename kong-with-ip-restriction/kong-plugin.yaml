@@ -1,0 +1,9 @@
+apiVersion: configuration.konghq.com/v1
+kind: KongPlugin
+metadata:
+  name: nginx-kong-plugin
+config: 
+  allow:
+  - 192.168.0.0/16
+plugin: ip-restriction
+
